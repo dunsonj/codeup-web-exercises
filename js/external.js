@@ -14,6 +14,8 @@
 
 //alert("Great, " + favColor + " is my favorite color too!!");
 
+//-------------------------------------------------------------------------------------------------------
+
 
 //Write some JavaScript code, that is, variables and operators, to describe the following scenarios. Do not worry about the real operations to get the values, the goal of these exercises is to understand how real world conditions can be represented with code.
 
@@ -44,8 +46,8 @@
 
 //alert('Your total Cost is ' + totalCost);
 
-// testing github
 
+//------------------------------------------------------------------------------------------------------
 
 //Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook, they pay you a different rate per hour. Google pays $400, Amazon $380, and Facebook $350. How much will you receive in payment for this week? You worked 10 hours for Facebook, 6 hours for Google and 4 hours for Amazon
 
@@ -97,36 +99,108 @@ alert ("Your total weekly pay is " + totalpayment);
 
 */
 
+//-----------------------------------------------------------------------------------------
 //A student can be enrolled in a class only if the class is not full and the class schedule does not conflict with her current schedule.
 
-// q: can the student enroll? T/F -> boolean
-// var canEnroll = true // false
-
-// conditions: isClassFull (T/f) && noConflict? (T/F)
-var isClassFull = true;     // =  ?
-var conflictExists = true; // = ?
-
-var canEnroll =  isClassFull == false && conflictExists == false
-
-// var canEnroll = !isClassFull && !conflictExists
-
 // If [first boolean expression == true] AND [the second boolean expression results in true] Then store [true] as the value to `canEnroll`.
-//
-//     if {either first or second boolean expression results in false} THEN store [false] as the value to `canEnroll'`
 
+// If {either first or second boolean expression results in false} THEN store [false] as the value to `canEnroll'`
+
+//conditions: isClassFull (T/f) && noConflict? (T/F)
+
+// q: can the student enroll? T/F -> boolean
+
+/*
+var canEnroll = true // false
+var isClassFull = true;
+var conflictExists = true;
+var canEnroll =  (isClassFull == false && conflictExists == false);
+var canNotEnroll =  (isClassFull == true && conflictExists == false);
+var cantEnroll =  (isClassFull == false && conflictExists == true);
+var canEnroll = !isClassFull && !conflictExists;
+
+
+var isClassFull = prompt("Is the class full?");
+console.log(isClassFull);
+
+var conflictExists = prompt("Is there a conflict with your current schedule?");
+console.log(conflictExists);
+
+If (canEnroll); {
+    var canEnroll =  (isClassFull == false && conflictExists == false);
+canEnroll = (alert ("Congratulations, you are now enrolled in the class"));}
+
+If (conflictExists); {
+    var classSize = Number(prompt("What is the maximum amount of student allowed in class?"));
+    console.log(classSize);
+    var studentsCurrentlyEnrolled = Number(prompt("How many students are currently enrolled?"));}
+    if ( studentsCurrentlyEnrolled < classSize) { alert ("Congratulations, you are now enrolled in the class");}
+    else { alert("Sorry, this class is full, you are not enrolled");}
 
 var openSpace = prompt("Does the class have space?");
 console.log(openSpace);
 var conflict = prompt("Does this class conflict your current schedule?");
 console.log(conflict)
 
-var conflict = true
-var = openSpace = classSpace
-var studentEnroll = classSpace;
-var classSpace = true;
-var classConflict = false
-var studentNotEnroll = classFull;
-var classFull = false;
-
+var canEnroll =  (isClassFull == false && conflictExists == false);
+var canNotEnroll =  (isClassFull == true && conflictExists == false);
+var cantEnroll =  (isClassFull == false && conflictExists == true);
+var canEnroll = !isClassFull && !conflictExists;
 var cannotEnroll = (!classFull && classSpace);
-var canEnroll = (classSpace && classConflict)
+var canEnroll = (classSpace && classConflict);
+
+*/
+
+
+
+
+
+//--------------------------------------------------------------------------------------------------------
+
+
+/*
+A product offer can be applied only if a person buys more than 2 items, and the offer has not expired. Premium members do not need to buy a specific amount of products.
+ */
+
+
+// var hasPremium = true;
+// var cartSize = 6;
+// var offerValid = true;
+// var canHaveDiscount = offerValid && (cartSize > 2 || hasPremium);
+// premiumMember = true;
+// offerValid = true;
+// moreThanTwo => 2 && offerValid == true;
+
+//------------------------------------------------------------------------------------------------------
+/*
+ Use the following code to follow the instructions below:
+
+ var username = 'codeup';
+ var password = 'notastrongpassword';
+ Create a variable that holds a boolean value for each of the following conditions:
+ the password must be at least 5 characters
+*/
+
+/*
+var username = 'codeup';
+var password = 'notastrongpassword';
+var minFivePassword = password.length >= 5;
+var password.length => 5;
+// the password must not include the username
+// var usernameNotInPassword = password.indexOf(username) === -1;
+
+var noUserName = !password.includes(username);
+// the username must be no more than 20 characters
+var userNameNotaParagraph = usernamelength <= 20;
+
+var username.length <= 20;
+// neither the username or password can start or end with whitespace
+var whitespace = username.trim() && password.trim();
+var noWhitespace = username.trim() === username && password.trim() === password;
+username.trim();
+password.trim();
+console.log(password);
+console.log(username);
+console.log(password.length);
+
+ */
