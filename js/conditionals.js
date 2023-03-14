@@ -22,23 +22,67 @@
  * console.logging the function's return value
  */
 
+// var colors = ['red', 'blue', 'yellow,', 'purple', 'green'];
+//
+// function analyseColor (colors) {
+//
+//     if (colors === "blue") {
+//         return "Blue is the color of the sky"; }
+//     else if (colors === "red"){
+//         return "Red is the color of Strawberries"; }
+//     else  {
+//         return ("I do not know anything about " + colors);
+//     }
+// }
+// var colors = ["red" , "blue" , "yellow", "purple", "green"];
+//
+//
+// console.log(analyseColor("yellow"));
+
+
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+// var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
 
+
+
+// console.log(analyseColor(randomColor));
+
+
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
+
+// var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+//
+// switch (colors) {
+//
+//     case "blue" :
+//         alert ("Blue is the color of the sky")
+//         break;
+//     case "red":
+//         alert ("Red is the color of Strawberries");
+//         break;
+//     default:
+//         alert ("I do not know anything about " + colors);
+//         break;
+// }
+//
+//
+
 
 /**
  * TODO:
@@ -46,6 +90,25 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+
+// var colors = ['red', 'blue', 'yellow,', 'purple', 'green'];
+//
+// function analyseColor (colors) {
+//
+//     if (colors === "blue") {
+//          alert("Blue is the color of the sky"); }
+//     else if (colors === "red"){
+//         alert("Red is the color of Strawberries"); }
+//     else  {
+//         alert( "I do not know anything about " + colors);
+//     }
+// }
+//
+//
+// var colors = prompt("Choose a color?");
+// console.log(colors);
+// console.log(analyseColor(colors));
+
 
 /* ########################################################################## */
 
@@ -69,6 +132,43 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
+//var random = Math.floor(Math.random() * 5)
+// function calculateTotal (bill, random) {
+//
+//
+//     if (random === 0) {
+//         alert("Sorry, you do not get a discount");
+//         return bill;
+//     } else if (random === 1) {
+//         alert("Congratulations you have a 10% discount");
+//         var discountedAmount = Number(bill * 0.10);
+//         var discountedTotal = Number(bill - discountedAmount);
+//
+//     } else if (random === 2) {
+//         alert("Congratulations you have a 25% discount");
+//         var discountedAmount = Number(bill * 0.25);
+//         var discountedTotal = Number(bill - discountedAmount);
+//
+//     } else if (random === 3) {
+//         alert("Congratulations you have a 35% discount");
+//         var discountedAmount = Number(bill * 0.35);
+//         var discountedTotal = Number(bill - discountedAmount);
+//
+//     } else if (random === 4) {
+//         alert("Congratulations you have a 50% discount");
+//         var discountedAmount = Number(bill * 0.50);
+//         var discountedTotal = Number(bill - discountedAmount);
+//     } else if (random === 5) {
+//         alert("Congratulations everything is FREE!");
+//         return 0;
+//     }
+//     return discountedTotal;
+// }
+
+// console.log(random)
+// console.log(calculateTotal(100 , random));
+
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -78,7 +178,74 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
+
 // var luckyNumber = Math.floor(Math.random() * 6);
+//
+// var bill = prompt("how much is your bill?");
+// console.log(bill);
+//
+// var bill = prompt("how much is your bill?");
+// console.log(bill);
+// var random = Math.floor(Math.random() * 6);
+//
+// function calculateTotal (bill, random) {
+//
+//
+//     if (random === 0) {
+//         alert("Sorry, you do not get a discount")
+//         alert("Your lucky number was  " + random + ". Your price before the discount is $ " + bill + ". Your total price with the discount is $" + discountedTotal );
+//         return bill;
+//     } else if (random === 1) {
+//         var discountedAmount = Number(bill * 0.10);
+//         var discountedTotal = Number(bill - discountedAmount);
+//
+//         alert("Congratulations your lucky number is 1, you have received a 10% discount");
+//         alert("Your lucky number was  " + random + ". Your price before the discount is $ " + bill + ". Your total price with the discount is $" + discountedTotal );
+//         // var discountedAmount = Number(bill * 0.10);
+//         // var discountedTotal = Number(bill - discountedAmount);
+//
+//     } else if (random === 2) {
+//         var discountedAmount = Number(bill * 0.25);
+//         var discountedTotal = Number(bill - discountedAmount);
+//
+//         alert("Congratulations your lucky number is 2, you have received a 25% discount");
+//         alert("Your lucky number was  " + random + ". Your price before the discount is $ " + bill + ". Your total price with the discount is $" + discountedTotal );
+//         // var discountedAmount = Number(bill * 0.25);
+//         // var discountedTotal = Number(bill - discountedAmount);
+//
+//     } else if (random === 3) {
+//         var discountedAmount = Number(bill * 0.35);
+//         var discountedTotal = Number(bill - discountedAmount);
+//
+//         alert("Congratulations your lucky number is 3, you have received a 35% discount")
+//         alert("Your lucky number was  " + random + ". Your price before the discount is $ " + bill + ". Your total price with the discount is $" + discountedTotal );
+//         // var discountedAmount = Number(bill * 0.35);
+//         // var discountedTotal = Number(bill - discountedAmount);
+//
+//     } else if (random === 4) {
+//         var discountedAmount = Number(bill * 0.50);
+//         var discountedTotal = Number(bill - discountedAmount);
+//
+//         alert("Congratulations your lucky number is 4, you have received a 50% discount")
+//         alert("Your lucky number was  " + random + ". Your price before the discount is $ " + bill + ". Your total price with the discount is $" + discountedTotal );
+//         // var discountedAmount = Number(bill * 0.50);
+//         // var discountedTotal = Number(bill - discountedAmount);
+//     } else if (random === 5) {
+//
+//         alert("Congratulations your lucky number is 5, you are our lucky winner, your order is FREE!");
+//         alert("Your lucky number was  " + random + ". Your price before the discount is $ " + bill + ". Your total price with the discount is $" + discountedTotal );
+//         return 0;
+//         }
+//     else if (random ===6) {
+//         alert ("This is the inclusive number")
+//         alert("Your lucky number was " + random + "Your price before the discount is: " + bill + "Your total price with the discount is " + discountedTotal );}
+//     return discountedTotal;
+//
+// }
+//
+//
+// console.log(random)
+// console.log(calculateTotal(bill, random));
 
 /**
  * TODO:
@@ -98,3 +265,6 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+
+
