@@ -9,10 +9,10 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
-function sayHello (name) {
-        return(" Hello " + name );
-}
-sayHello("Jakira")
+// function sayHello (name) {
+//         return(" Hello " + name );
+// }
+// sayHello("Jakira")
 
 
 /**
@@ -25,7 +25,7 @@ sayHello("Jakira")
 /*
 var helloMessage = sayHello("Jakira");
 
-console.log(helloMessage);
+console.log(helloMessage)
 */
 
 /**
@@ -35,9 +35,9 @@ console.log(helloMessage);
  * console.
  */
 
-var myName = "Jakira";
-
-console.log(sayHello(myName));;
+// var myName = "Jakira";
+//
+// console.log(sayHello(myName));;
 
 
 
@@ -134,13 +134,13 @@ console.log(isTwo(random));
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 
-function applyDiscount (ogPrice, disPercent ){
-        var discountedAmount = Number(ogPrice * disPercent);
-        var discountedTotal = Number(ogPrice - discountedAmount);
-        console.log(discountedTotal);
-}
-var ogPrice = 100;
-var disPercent = 0.2;
-
-applyDiscount(ogPrice, disPercent );
-applyDiscount(45.99 , 0.12);
+// function applyDiscount (ogPrice, disPercent ){
+//         var discountedAmount = Number(ogPrice * disPercent);
+//         var discountedTotal = Number(ogPrice - discountedAmount);
+//         console.log(discountedTotal);
+// }
+// var ogPrice = 100;
+// var disPercent = 0.2;
+//
+// applyDiscount(ogPrice, disPercent );
+// applyDiscount(45.99 , 0.12);
