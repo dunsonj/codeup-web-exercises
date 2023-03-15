@@ -267,25 +267,24 @@
  */
 
 
-var number = confirm("Would you like to enter a number?");
-console.log(number);
-
-if(number % 2 == 0) {
-    console.log("The number is even.");
-}
-else {
-    console.log("The number is odd.");
-}
-
-var totalPlus = number + 100;
-console.log(totalPlus);
-
-
-var isPositive = function (num) {
-    if (num > 0) {
-        alert('The number ' + num + ' is positive')
-    } else {
-        alert('The number ' + num + ' is negative')
-        alert('Please refresh the page to enter a number')
-    }
-}
+// var confirmNumber = confirm("Would you like to enter a number?");
+// var number = prompt("What is the number?");
+// console.log(number);
+//
+// if (number > 0) {
+//     alert('The number ' + number + ' is positive')
+// } else {
+//     alert('The number ' + number + ' is negative')
+//     alert('Please refresh the page to enter a number')
+// }
+//
+//
+// var totalPlus = Number(number) + 100 ;
+// console.log(totalPlus);
+//
+// if(number % 2 == 0) {
+//     console.log("The number is even.");
+// }
+// else {
+//     console.log("The number is odd.");
+// }
