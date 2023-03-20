@@ -59,8 +59,18 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+    var cities = ['New York', 'San Diego', 'Austin'];
 
-// var cities = ['New York', 'San Diego', 'Austin'];
+    function first(cities) {
+    return cities[0];
+    }
+    console.log(first(cities[0]));
+
+    function third(cities) {
+        return cities[2];
+    }
+    console.log(third(cities[2]));
+
 //
 //     console.log('There are ' + cities.length + ' cities in this list.');
 //     console.log('The first city is: ' + cities[0]);
