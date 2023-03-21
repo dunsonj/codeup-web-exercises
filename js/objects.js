@@ -11,12 +11,12 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-    var person = {};
-    person.firstName = "Jakira";
-    person.lastName = "Dunson";
-
-    console.log(person.firstName);
-    console.log(person.lastName);
+    // var person = {};
+    // person.firstName = "Jakira";
+    // person.lastName = "Dunson";
+    //
+    // console.log(person.firstName);
+    // console.log(person.lastName);
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -26,8 +26,14 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-    person.sayHello = "Hello from ";
-    console.log(person.sayHello + person.firstName + " " + person.lastName + "!");
+    // person.sayHello() = function (){
+    //     return "Hello from " + person.firstName + " " + person.lastName + "!";
+    //     console.log(person.sayHello());
+    //
+    // }
+
+    // person.sayHello = "Hello from ";
+    // console.log(person.sayHello + person.firstName + " " + person.lastName + "!");
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -44,28 +50,42 @@
      *
      *
      */
+    //
+    //    var shoppers = [
+    //        {name: 'Cameron', amount: 180},
+    //        {name: 'Ryan', amount: 250},
+    //        {name: 'George', amount: 320}
+    //    ];
+    //
+    //    function heb(shopObj) {
+    //        for(var i = 0; i < shopObj.length ; i++){
+    //
+    //        if (shopObj[i].amount >= 200) {
+    //            let newTotal = shopObj[i].amount - shopObj[i].amount * 0.12;
+    //
+    //            console.log( shopObj[i].name + ' your total is: ' + shopObj[i].amount + ". You You get a 12% discount for your purchase. which is:" + shopObj[i].amount * 0.12, "Your new total is: $ " + newTotal) }
+    //        else
+    //            {
+    //                console.log( shopObj[i].name + " You do not get a discount")
+    //            }
+    //        }
+    //    }
+    //
+    // heb(shoppers);
 
-    var shoppers = [
-        {name: 'Cameron', amount: 180},
-        {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
-    ];
 
-    function heb(shopObj) {
-        for(var i = 0; i < shopObj.length ; i++){
+    // shoppers.forEach(function(shopper ){
+    //     if(shopper.amount >= 200){
+    //
+    //     var discountAmount = shopper.amount * .12;
+    //     var newTotal = shopper.amount - discountAmount;
+    //     console.log("Name " + shopper.name + ", Amount: " + shopper.amount + ", Discount " + discountAmount + ", New Total " + newTotal);}
+    //     else {
+    //         console.log("Sorry you do not receive a discount")
+    //     }
+    //     }
+    // )
 
-        if (shopObj[i].amount >= 200) {
-            let newTotal = shopObj[i].amount - shopObj[i].amount * 0.12;
-
-            console.log( shopObj[i].name + ' your total is: ' + shopObj[i].amount + ". You You get a 12% discount for your purchase. which is:" + shopObj[i].amount * 0.12, "Your new total is: $ " + newTotal) }
-        else
-            {
-                console.log( shopObj[i].name + " You do not get a discount")
-            }
-        }
-    }
-
- heb(shoppers);
 
     //
     // console.log(shoppers[0].name + ' your total is: ' + shoppers[0].amount + ". You do not get a discount for your purchase.");
@@ -89,58 +109,69 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
+    //
+    // var books = [
+    //     {
+    //        title : "The Diary of a young girl" ,
+    //         author : {
+    //         firstName : "Anne" ,
+    //         lastName : "Frank"
+//}
+    //     },
+    //     {
+    //         title : "Little Women" ,
+    //         author : {
 
-    var books = [
-        {
-           title : "The Diary of a young girl" ,
-            firstName : "Anne" ,
-            lastName : "Frank"
-        },
-        {
-            title : "Little Women" ,
-            firstName : "Louisa May",
-            lastName : "Alcott"
-        },
-        {
-            title : "Assata" ,
-            firstName : "Assata",
-            lastName : "Shakur"
-        },
-        {
-            title : "To Kill a Mockingbird",
-            firstName: "Harper",
-            lastName: "Lee"
-        },
-        {
-            title: "The bridge to Terabithia",
-            firstName: "Katherine",
-            lastName: "Paterson"
-        }
-    ]
-
-    console.log(books[0].title)
-    console.log(books[0].firstName)
-    console.log(books[0].lastName)
+    //         firstName : "Louisa May",
+    //         lastName : "Alcott"
+    //          }
+    //     },
+    //     {
+    //         title : "Assata" ,
+    //          author : {
+    //         firstName : "Assata",
+    //         lastName : "Shakur"
+    //     }
+    //     },
+    //     {
+    //         title : "To Kill a Mockingbird",
+    //          author : {
+    //         firstName: "Harper",
+    //         lastName: "Lee"
+    //     }
+    //     },
+    //     {
+    //         title: "The bridge to Terabithia",
+    //         author :{
+    //         firstName: "Katherine",
+    //         lastName: "Paterson"
+    //     }
+    //     }
+    // ]
+    //
+    // console.log(books[0].title)
+    // console.log(books[0].author.firstName)
+    // console.log(books[0].author.lastName)
 
 
     // console.log(books[1].title)
-    // console.log(books[1].firstName)
-    // console.log(books[1].lastName)
+    // console.log(books[1].author.firstName)
+    // console.log(books[1].author.lastName)
 
 
     // console.log(books[2].title)
-    // console.log(books[2].firstName)
-    // console.log(books[2].lastName)
+    // console.log(books[2].author.firstName)
+    // console.log(books[2].author.lastName)
 
 
-    // console.log(books[3].title)
-    // console.log(books[3].firstName)
-    // console.log(books[3].lastName)
+    // console.log(books[3].author.title)
+    // console.log(books[3].author.firstName)
+    // console.log(books[3].author.lastName)
 
 
-    // console.log(books[4].title)
-    // console.log(books[4].firstName)
-    // console.log(books[4].lastName)
+    // console.log(books[4].author.title)
+    // console.log(books[4].author.firstName)
+    // console.log(books[4].author.lastName)
 
 
     /**
@@ -190,22 +221,39 @@
      */
 
 
-var createBook = function (title, authorFirstName, authorLastName) {
-    var book = {}
-        book.title = title;
-        book.author = {};
-        book.author.firstName = authorFirstName;
-        book.author.lastName = authorLastName;
-            return book;
-    };
- books.push(createBook("To Kill a Mockingbird", "Harper", "Lee"));
+    var createBook = function (title, authorFirstName, authorLastName) {
+        // var newBook = {}
+        // newBook.title = title;
+        // newBook.author = {};
+        // newBook.author.firstName = authorFirstName;
+        // newBook.author.lastName = authorLastName;
+        // return newBook;
 
- var showBookInfo = function (book, i){
-     console.log("Book: #" + (i+1));
-     console.log("Title: " + book.title);
-     console.log("Author: " + book.author.firstName + book.author.lastName);
-     console.log("------------------------");
- }
+        return {
+            title: title,
+            author : author
+        }
+
+    };
+    // newBook.push(createBook("To Kill a Mockingbird", "Harper", "Lee"));
+    var book = [createBook("To kill a Mockingbird", "Harper" , "Lee")]
+    console.log(book)
+
+//  var showBookInfo = function (book, i){
+//      console.log("Book: #" + (i+1));
+//      console.log("Title: " + book.title);
+//      console.log("Author: " + book.author.firstName + book.author.lastName);
+//      console.log("------------------------");
+//  }
+//
+
+
+    function showBookInfo(bookObj){
+
+
+    }
+
+
 
 
 })();
