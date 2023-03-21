@@ -168,15 +168,15 @@
      *      ...
      */
 
-    for (let i = 0; i < books.length; i++){
-        books.indexOf[i];
-
-        console.log("Book #" + (i +1))
-        console.log("Title: " + books[i].title)
-        console.log("Author: " + books[i].firstName + books[i].lastName)
-        console.log("-------------------------")
-
-    };
+    // for (let i = 0; i < books.length; i++){
+    //     books.indexOf[i];
+    //
+    //     console.log("Book #" + (i +1))
+    //     console.log("Title: " + books[i].title)
+    //     console.log("Author: " + books[i].firstName + books[i].lastName)
+    //     console.log("-------------------------")
+    //
+    // };
 
     /**
      * Bonus:
@@ -188,6 +188,25 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+
+var createBook = function (title, authorFirstName, authorLastName) {
+    var book = {}
+        book.title = title;
+        book.author = {};
+        book.author.firstName = authorFirstName;
+        book.author.lastName = authorLastName;
+            return book;
+    };
+ books.push(createBook("To Kill a Mockingbird", "Harper", "Lee"));
+
+ var showBookInfo = function (book, i){
+     console.log("Book: #" + (i+1));
+     console.log("Title: " + book.title);
+     console.log("Author: " + book.author.firstName + book.author.lastName);
+     console.log("------------------------");
+ }
+
 
 })();
 
