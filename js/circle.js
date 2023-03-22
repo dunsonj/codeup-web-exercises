@@ -8,7 +8,7 @@
         // radiusTwo: 5,
         // areaTwo: Math.PI * Math.pow(5, 2),
 
-        getArea:  function ()
+        getArea:  function ()  //called method because it is part of the object
     {
         // TODO: complete this method
         // hint: area = pi * radius^2
