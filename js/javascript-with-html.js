@@ -16,6 +16,6 @@ var likesPizza = confirm("Do you like pizza");
 
 console.log(likesPizza);
 
-var bestToppings = prompt(message: "what toppings do you like on your pizza?" )
+//var bestToppings = prompt(message: "what toppings do you like on your pizza?")
 
 console.log(bestToppings);
