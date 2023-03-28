@@ -3,6 +3,12 @@ this file is named "site.css" and is in a directory named "css"
 */
 
 .fancy-header {
-    color: red;
+    color: darkslategrey;
+    text-align: center;
     /*text-decoration: underline;*/
+}
+.style-header {
+    text-decoration: underline;
+    color: gray;
+    font-family: monospace;
 }
