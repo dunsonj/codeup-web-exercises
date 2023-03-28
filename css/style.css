@@ -9,12 +9,19 @@ this file is named "site.css" and is in a directory named "css"
 }
 .style-header {
     text-decoration: underline;
-    color: gray;
+    color: darkolivegreen;
 font-family: monospace;
 }
 
 body{
     /*background-color: lightslategray;*/
-    background-image: url("../img/9-01.jpg");
+    background-image: url("../img/360_F_223704267_YKJgE69z5XwmqhkIUwZa6No8s5Bc6xvV.jpg");
+    font-family: Papyrus;
+    /*text-decoration-color: darkolivegreen;*/
+}
+
+table, th, td {
+    border: 1px solid;
+    font-family: Papyrus ;
 }
 
