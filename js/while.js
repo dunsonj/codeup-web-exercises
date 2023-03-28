@@ -1,8 +1,15 @@
-var i = 1;
+// var i = 2;
+//
+// while (i < 16) {
+//     i++;
+//     console.log((i * 2) );
+//
+//
+// }
 
-while (i < 30) {
-    console.log(Math.pow(i , 2));
-    i++;
+var i = 0;
 
-
+while (i <= 65536) {
+    console.log(+i);
+    i *= 2;
 }
