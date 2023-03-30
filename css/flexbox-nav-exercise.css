@@ -1,0 +1,93 @@
+
+@import "https://fonts.google.com/specimen/Montserrat?query=Montserrat";
+@import "https://fonts.google.com/specimen/Work+Sans?query=Work+Sans";
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: #C1C1C1;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.container{
+   display: flex;
+    /*justify-content: space-between;*/
+    align-items: center;
+    height: 100%;
+    justify-content: space-evenly;
+}
+.logo{
+
+    justify-content: center;
+    font-size: 2em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+    align-items: center;
+    margin: auto;
+
+
+
+
+    /*text-align-all: center;*/
+    /*font-size: x-large;*/
+    /*font-weight: bold;*/
+    /*font-size: 40px;*/
+    /*flex-grow: 3;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+
+}
+
+
+
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+    display: flex;
+}
+
+.li.a{
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-family: Verdana;
+}
+nav a:hover {
+    background: blue;
+}
+
+
+.characters{
+    display: flex;
+    justify-content: flex-end;
+    /*align-items: center;*/
+    height: 100%;
+}
+i{
+   display: flex;
+    padding: 5px;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+a{
+    display: flex;
+    padding: 5px;
+    margin-left: 5px;
+    justify-content: flex-start;
+
+}
