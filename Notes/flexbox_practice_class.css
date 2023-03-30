@@ -1,0 +1,124 @@
+.container{
+    height: 450px;
+    width: 650px;
+    border: 3px solid #D64933;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+}
+body{
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+nav {
+    background: #333333;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    font-family: Verdana;
+    display: inline-block;
+    padding: 1em;
+}
+
+/*the nav a is the links of the navigation bar */
+nav a:hover {
+    background: black;
+}
+nav ul li:nth-child(4){
+    margin-left: auto;
+    background-color: #D64933;
+}
+
+/*nav ul li:nth-child(4):  it is using the 4th (child) list item of the ul in the navigation bar*/
+
+
+.box{
+    height: 75px;
+    width: 175px;
+    border: 1px solid darkred;
+    background-color: black;
+    color: white;
+    margin: 5px;
+    font-size: 24px;
+}
+
+img{
+    border-radius: 50%;
+}
+
+.img-container{
+    display:flex;
+    flex-direction: column;
+}
+
+.column-container{
+    display: flex;
+    align-items: flex-start;
+}
+
+.p-container{
+
+}
+
+/*body {*/
+/*    margin: 0;*/
+/*    font-family: Roboto;*/
+/*    background: orange;*/
+/*}*/
+h1, h2, h3 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+h3 {
+    color: grey;
+}
+hr {
+    border-top: 1px solid whitesmoke;
+    width: 90px;
+}
+.card {
+    margin: .5em;
+    border-radius: 2px;
+    background: orangered;
+    width: 250px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+img {
+    border-radius: 120px;
+    width: 120px;
+}
+i {
+    color: grey;
+}
+.text-section {
+    position: relative;
+    bottom: 1.5em;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.icons i {
+    font-size: 1em;
+}
