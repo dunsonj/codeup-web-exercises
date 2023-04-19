@@ -28,6 +28,29 @@
 //
 // var sho= $('h1').html()
 // alert(sho)
+//
+// //multiple selectors
+// $('h1 , p , li').css('background-color', "yellow")
 
-//multiple selectors
-$('h1 , p , li').css('background-color', "yellow")
+//Mouse Events Excercise
+
+
+//Changing the background color when h1 is clicked
+$('h1').click(function (){
+    $('h1').css('background-color', "purple")
+});
+//Making all paragraphs 18px big once double clicked
+$('p').dblclick(function (){
+    $('p').css('font-size', '18px')
+});
+//Making the li to red when hovered over and reset back to black when it is not
+$('li').hover(
+    function() {
+        $('li').css('color', 'red');
+    },
+    function() {
+        $('li').css('color', 'black');
+    }
+);
+
+
