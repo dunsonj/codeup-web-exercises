@@ -16,5 +16,26 @@
             "sugar"
         ],
         "date": "February 14, 2015"
+    }, {
+    "title": "Beauty is in the Eye of the Beholder ",
+    "content": " Beauty is commonly described as a feature of objects that makes these objects pleasurable to perceive. Such objects include landscapes, sunsets, humans and works of art." ,
+    "categories" : [
+        "art",
+        "music",
+        "laughter",
+        "love"
+    ],
+    "date": "July 17, 2017"
+},
+    {
+        "title": "Music is great",
+        "content": "Music is generally defined as the art of arranging sound to create some combination of form, harmony, melody, rhythm or otherwise expressive content. Definitions of music vary depending on culture, though it is an aspect of all human societies, a cultural universal.",
+        "categories": [
+            "pop",
+            "regge",
+            "r&b",
+            "latino"
+        ],
+        "date": "August 11, 2020"
     }
-]
+    ]

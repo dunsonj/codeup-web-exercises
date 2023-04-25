@@ -7,24 +7,22 @@
 <body>
 <!--<button id="button">Click here!</button>-->
 <div id="posts"> </div>
-
+<script src="js/jquery-3.6.4.js"></script>
 <script>
-    // document.getElementById('button').addEventListener('click', loadText);
+    (function () {
+        "use strict";
+        $.get('data/blog.json').done(function (info){
+            console.log(info);
+            let words = ''
 
+            info.forEach(function (word){
+                words += `<h1>${word.title}</h1> <h6>${word.content}</h6> <h6>${word.categories}</h6> <h3> ${word.date}</h3>`
+            })
+            $('#posts').append(`${words}`)
 
-    // function loadText(){
-    //     //creating a XHR Object
-    //     var xhr = XMLHttpRequest;
-    //     //Open- type, url/file. async
-    //     xhr.open('GET', 'blog.json', true);
-    //
-    //     xhr.onload = function (){
-    //         if(this.status == 200){
-    //             console.log(this.responseText);
-    //         }
-    //     }
-    // xhr.send();
-    })
+        })
+
+    })();
 </script>
 
 </body>
