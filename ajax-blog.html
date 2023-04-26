@@ -16,7 +16,7 @@
             let words = ''
 
             info.forEach(function (word){
-                words += `<h1>${word.title}</h1> <h6>${word.content}</h6> <h6>${word.categories}</h6> <h3> ${word.date}</h3>`
+                words += `<h1>${word.title}</h1> <p>${word.content}</p> <p>${word.categories}</p> <h3> ${word.date}</h3>`
             })
             $('#posts').append(`${words}`)
 
