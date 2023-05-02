@@ -1,58 +1,75 @@
-(function (){
+(function () {
     "use strict"
 
-    $.get("https://api.openweathermap.org/data/2.5/forecast", {
+    // $.get("https://api.openweathermap.org/data/2.5/forecast", {
+    //     APPID: OPEN_WEATHER_APPID,
+    //     q: "New York City, US",
+    //     units: 'imperial',
+    // }).done(function (weatherForecast) {
+    //     console.log(weatherForecast);
+    // });
+
+    $('#inputSubmit').on('click', () => {
+        console.log('click')
+        console.log($('#cityInput').val());
+        const input = $('#cityInput').val();
+        geocode(input, MAP_BOX_KEY);
+    })
+
+    $.get("http://api.openweathermap.org/data/2.5/onecall", {
         APPID: OPEN_WEATHER_APPID,
-        q: "New York City, US",
-        units: 'imperial',
-    }).done(function (weatherForecast) {
-        console.log(weatherForecast);
+        lat: 40.85044,
+        lon: -73.93315,
+        units: "imperial"
+    }).done(function (data) {
+        // console.log('The entire response:', data);
+        // console.log('Diving in - here is current information: ', data.current);
+        // console.log('A step further - information for tomorrow: ', data.daily[1]);
+        console.log(data.daily)
+        let markUp;
+        data.daily.forEach((day, i) => {
+
+            if (i < 5) {
+                const dayTemp = day.temp.day;
+                const dayMin = day.temp.min;
+                const dayMax = day.temp.max;
+                const dayHumidity = day.humidity;
+                const dayIcon = `https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`;
+                const dayMain = day.weather[0].main;
+
+                markUp += `
+                            <div class="card text-center">
+                                <div class="card-header">
+                                    ${dayMain}
+                                </div>
+                                <div class="card-body">
+                                <img src="${dayIcon}">
+                                    <h1>${dayTemp}</h1>
+                                    <p>Minimum: ${dayMin} </p>
+                                    <p>Maximum: ${dayMax} </p>
+                                    <p>Humidity: ${dayHumidity}</p>
+                                </div>
+                            </div>
+                            `
+            }
+
+        })
+        console.log(markUp)
+        $('.weatherCards').html(markUp)
+
+
+        mapboxgl.accessToken = 'pk.eyJ1Ijoia2FyaWxlbmoxMzMiLCJhIjoiY2xnemhrenk2MGpjcjNrcnQxYTNlY2NlYyJ9.Ram9dmI6mQzUElNWQ3S87A';
+        var map = new mapboxgl.Map({
+            container: 'map', // container ID
+            style: 'mapbox://styles/mapbox/streets-v11', // style URL
+            zoom: 14, // starting zoom
+            center: [-73.93315, 40.85044] // [lng, lat]
+        });
+
     });
 
-    function gatherCityLocation() {
-        const newName = document.getElementById('cityInput');
-        const cityName = document.getElementById('cityName');
-        cityName.innerHTML = "" + newName.value + "";
 
 
-        fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${newName.value}&appid=${OPEN_WEATHER_APPID}`)
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                for (i = 0; i < 5; i++) {
-                    document.getElementById("day" + (i + 1) + "Min").innerHTML = "Min:" + (data.list[i].main.temp_min - 57.99).toFixed(1) + "°";
-                }
-                for (i = 0; i < 5; i++) {
-                    document.getElementById("day" + (i + 1) + "Max").innerHTML = "Max:" + (data.list[i].main.temp_max - 58.96).toFixed(1) + "°";
-                }
-                for (i = 0; i < 5; i++) {
-                    document.getElementById("img" + (i + 1)).src = "http://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png";
-                }
-            })
-            .catch(error => alert("Error"))
-    }
-
-    function defaultPage() {
-        document.getElementById('cityInput').defaultValue = 'New York City';
-        gatherCityLocation();
-    }
-
-    const d = new Date();
-    const weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-
-    function checkDay(day) {
-        if (day + d.getDay() > 6) {
-            return day + d.getDay() - 7;
-        } else {
-            return day + d.getDay();
-        }
-    }
-
-    for (i = 0; i < 5; i++) {
-        console.log(weekday[i])
-
-        document.getElementById("day" + (i + 1)).innerHTML = weekday[i];
-    }
 
 
 })()
