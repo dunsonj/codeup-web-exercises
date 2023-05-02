@@ -1,4 +1,6 @@
 (function (){
+    "use strict"
+
     $.get("https://api.openweathermap.org/data/2.5/forecast", {
         APPID: OPEN_WEATHER_APPID,
         q: "New York City, US",
