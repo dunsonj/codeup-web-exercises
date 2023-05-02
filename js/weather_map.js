@@ -1,14 +1,6 @@
 (function () {
     "use strict"
 
-    // $.get("https://api.openweathermap.org/data/2.5/forecast", {
-    //     APPID: OPEN_WEATHER_APPID,
-    //     q: "New York City, US",
-    //     units: 'imperial',
-    // }).done(function (weatherForecast) {
-    //     console.log(weatherForecast);
-    // });
-
     $('#inputSubmit').on('click', () => {
         console.log('click')
         console.log($('#cityInput').val());
@@ -26,7 +18,7 @@
         // console.log('Diving in - here is current information: ', data.current);
         // console.log('A step further - information for tomorrow: ', data.daily[1]);
         console.log(data.daily)
-        let markUp;
+        let markUp = '';
         data.daily.forEach((day, i) => {
 
             if (i < 5) {
@@ -67,8 +59,10 @@
         });
 
     });
-
-
+// map.on('click', (e) => {
+//     console.log(e)
+//     })
+//
 
 
 
