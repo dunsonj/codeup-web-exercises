@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather_Map</title>
+    <link rel="stylesheet" href="css/weather_map.css">
+
+</head>
+<body onload="defaultPage()">
+<center>
+    <h1 id="Para1">Five Days Weather Forecast</h1>
+    <p id="inputContainer">City: <input type="text" id="cityInput"></p>
+    <button onclick="gatherCityLocation()">Submit</button>
+    <h2 id="cityName">New York City</h2>
+</center>
+<div id="weatherContainer">
+    <div class="iconContainers">
+        <div class="icons">
+            <p class="weather" id="day1"></p>
+            <div class="image"><img src="img/images.png" class="imgClass" id="img1"></div>
+            <p class="minValues" id-="day1Min">...</p>
+            <p class="maxValues" id-="day1Max">...</p>
+        </div>
+    </div>
+
+    <div class="iconContainers">
+        <div class="icons">
+            <p class="weather" id="day2"></p>
+            <div class="image"><img src="img/images.png" class="imgClass" id="img2"></div>
+            <p class="minValues" id-="day2Min">...</p>
+            <p class="maxValues" id-="day2Max">...</p>
+        </div>
+    </div>
+    <div class="iconContainers">
+        <div class="icons">
+            <p class="weather" id="day3"></p>
+            <div class="image"><img src="img/images.png" class="imgClass" id="img3"></div>
+            <p class="minValues" id-="day3Min">...</p>
+            <p class="maxValues" id-="day3Max">...</p>
+        </div>
+    </div>
+    <div iclass="iconContainers">
+        <div class="icons">
+            <p class="weather" id="day4"></p>
+            <div class="image"><img src="img/images.png" class="imgClass" id="img4"></div>
+            <p class="minValues" id-="day4Min">...</p>
+            <p class="maxValues" id-="day4Max">...</p>
+        </div>
+    </div>
+    <div class="iconContainers">
+        <div class="icons">
+            <p class="weather" id="day5"></p>
+            <div class="image"><img src="img/images.png" class="imgClass" id="img5"></div>
+            <p class="minValues" id-="day5Min">...</p>
+            <p class="maxValues" id-="day5Max">...</p>
+        </div>
+    </div>
+
+
+</div>
+
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+<script src="js/jquery-3.6.4.js"></script>
+<script src="js/keys.js"></script>
+<script>
+
+    $.get("https://api.openweathermap.org/data/2.5/forecast", {
+        APPID: OPEN_WEATHER_APPID,
+        q: "New York City, US",
+        units: 'imperial',
+    }).done(function (weatherForecast) {
+        console.log(weatherForecast);
+    });
+
+    function gatherCityLocation() {
+        const newName = document.getElementById('cityInput');
+        const cityName = document.getElementById('cityName');
+        cityName.innerHTML = "" + newName.value + "";
+
+
+        fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${newName.value}&appid=${OPEN_WEATHER_APPID}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                for (i = 0; i < 5; i++) {
+                    document.getElementById("day" + (i + 1) + "Min").innerHTML = "Min:" + (data.list[i].main.temp_min - 57.99).toFixed(1) + "°";
+                }
+                for (i = 0; i < 5; i++) {
+                    document.getElementById("day" + (i + 1) + "Max").innerHTML = "Max:" + (data.list[i].main.temp_max - 58.96).toFixed(1) + "°";
+                }
+                for (i = 0; i < 5; i++) {
+                    document.getElementById("img" + (i + 1)).src = "http://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png";
+                }
+            })
+            .catch(error => alert("Error"))
+    }
+
+    function defaultPage() {
+        document.getElementById('cityInput').defaultValue = 'New York City';
+        gatherCityLocation();
+    }
+
+    const d = new Date();
+    const weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+    function checkDay(day) {
+        if (day + d.getDay() > 6) {
+            return day + d.getDay() - 7;
+        } else {
+            return day + d.getDay();
+        }
+    }
+
+    for (i = 0; i < 5; i++) {
+        console.log(weekday[i])
+
+        document.getElementById("day" + (i + 1)).innerHTML = weekday[i];
+    }
+
+
+</script>
+
+</body>
+</html>

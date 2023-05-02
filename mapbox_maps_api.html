@@ -5,14 +5,54 @@
     <title>Mapbox_Maps_Api</title>
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
-
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet'/>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet'/>
+    <script> js / jquery - 3.6
+    .4.js</script>
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 700px;
+        }
+    </style>
 </head>
 <body>
 
+<h1>La Casa Del Mofongo </h1>
 
+<div id='map'></div>
+
+
+<!--Make sure the info window does not display until the marker has been clicked on.-->
+
+<!--Refactor your code to display at least three of your favorite restaurants with information about each. Create an array of objects with information about each restaurant to accomplish this. Use a .forEach() loop rather than a for loop-->
 <script>
-  mapboxgl.accessToken = 'pk.eyJ1Ijoia2FyaWxlbmoxMzMiLCJhIjoiY2xnemhrenk2MGpjcjNrcnQxYTNlY2NlYyJ9.Ram9dmI6mQzUElNWQ3S87A';
+    mapboxgl.accessToken = 'pk.eyJ1Ijoia2FyaWxlbmoxMzMiLCJhIjoiY2xnemhrenk2MGpjcjNrcnQxYTNlY2NlYyJ9.Ram9dmI6mQzUElNWQ3S87A';
+    var map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        zoom: 16, // starting zoom
+        center: [-73.93315, 40.85044] // [lng, lat]
+    });
+    // function placeMarkerAndPopup(info, token, map) {
+    //     geocode(info.address, token).then(function(coordinates) {
+    var popup = new mapboxgl.Popup()
+        .setLngLat([-73.93315, 40.85044])
+        .setHTML("<p>Mofongo babayyy</p>")
+        .addTo(map)
+
+    var marker = new mapboxgl.Marker()
+        .setLngLat([-73.93315, 40.85044])
+        .addTo(map)
+        .setPopup(popup);
+    popup.addTo(map);
+        // });
+    // }
+
+    placeMarkerAndPopup(alamoInfo, accessToken, map);
+
+
 </script>
 </body>
 </html>
