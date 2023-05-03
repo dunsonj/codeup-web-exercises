@@ -1,6 +1,7 @@
 * {
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
-
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 59%);
 
     /*color: black;*/
     /*background: grey;*/
@@ -14,3 +15,13 @@
 }
 
 
+.weatherCards{
+
+    background:#FF80AB ;
+    /*background-color: #FF80AB;*/
+}
+
+.navbar{
+    /*background: white;*/
+    font-weight: bold;
+}

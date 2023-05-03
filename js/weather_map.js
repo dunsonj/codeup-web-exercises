@@ -7,7 +7,7 @@
         const input = $('#cityInput').val();
         geocode(input, MAP_BOX_KEY);
     })
-
+//function to be able to gather the info from the array, displaying it on a bootstrap card.
 const getWeatherData = (lon, lat, key) => {
     $.get("http://api.openweathermap.org/data/2.5/onecall", {
         APPID: key,
@@ -57,7 +57,7 @@ const getWeatherData = (lon, lat, key) => {
 
 
 
-
+//creatng marker on the map
         mapboxgl.accessToken = 'pk.eyJ1Ijoia2FyaWxlbmoxMzMiLCJhIjoiY2xnemhrenk2MGpjcjNrcnQxYTNlY2NlYyJ9.Ram9dmI6mQzUElNWQ3S87A';
         var map = new mapboxgl.Map({
             container: 'map', // container ID
@@ -92,7 +92,7 @@ const getWeatherData = (lon, lat, key) => {
 
 
         })
-
+//getting the location and weather to change on the page once a new location is searched
     const btnInput = $('#buttonAddress')
     btnInput.on('click', function (e){
         e.preventDefault()
@@ -139,7 +139,7 @@ const getWeatherData = (lon, lat, key) => {
 
     //
     // geocode(addressInput, MAP_BOX_KEY );
-
+//add zoom buttons to map
 map.addControl(new mapboxgl.NavigationControl())
 
 
