@@ -6,3 +6,11 @@
     /*background: grey;*/
     font-family: 'Poiret One', cursive;
 }
+
+#map {
+    width: 100%;
+    height: 300px;
+    background-blend-mode: rgba(0,0,0,0.1);
+}
+
+

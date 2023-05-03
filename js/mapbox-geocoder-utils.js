@@ -18,10 +18,11 @@ function geocode(search, token) {
     var endPoint = '/geocoding/v5/mapbox.places/';
     return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
         .then(function(res) {
+            // console.log(res)
             return res.json();
             // to get all the data from the request, comment out the following three lines...
         }).then(function(data) {
-            console.log(data);
+            // console.log(data.features[0].center);
             return data.features[0].center;
         });
 }
