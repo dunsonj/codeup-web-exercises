@@ -43,7 +43,7 @@
                                     <h1>${dayTemp}&#8457;</h1>
                                     <p>Minimum: ${dayMin}&#8457; </p>
                                     <p>Maximum: ${dayMax}&#8457; </p>
-                                    <p>Humidity: ${dayHumidity}&#8457;</p>
+                                    <p>Humidity: ${dayHumidity}%;</p>
                                 </div>
                             </div>
                             `
