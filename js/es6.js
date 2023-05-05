@@ -31,6 +31,9 @@ const users = [
 
 // TODO: fill in your name and email and add some programming languages you know
 // to the languages array
+
+
+
 // TODO: replace the `var` keyword with `const`, then try to reassign a variable
 // declared as `const`
 
@@ -59,7 +62,7 @@ users.push({
 */
 
 
-users.push = ({
+users.push({
     name,
     email,
     languages
@@ -93,6 +96,8 @@ users.forEach((user)=>{
     return emails.push(user.email);
 });
 
+//another way
+users.forEach((user) => emails.push(user.email));
 
 /*
 old code
@@ -103,6 +108,8 @@ users.forEach(function(user) {
 users.forEach((user) => {
     return names.push(user.name);
 });
+
+
 
 // TODO: replace `var` with `let` in the following declaration
 // var developers = [];
@@ -121,12 +128,16 @@ users.forEach((user) => {
     */
 
     const{name, email, languages} = user;
-    console.log(user)
+    // console.log(user)
+
 
     // TODO: rewrite the assignment below to use template strings
     // developers.push(name + '\'s email is ' + email + name + ' knows ' + languages.join(', '));
 
     developers.push(`${name}'s email is ${email}  ${name} knows ${languages.join(', ')}`);
+    console.log(developers)
+
+
 });
 
 // TODO: Use `let` for the following variable
@@ -143,6 +154,12 @@ developers.forEach(function (developer) {
 
 for (let developer of developers ){
     // TODO: rewrite the assignment below to use template strings
-    list += '<li>' + developer + '</li>';
+    // list += '<li>' + developer + '</li>';
+    //using template literals
+    list += `<li>${developer}</li>`
+
+    console.log(list)
+
 };
 list += '</ul>';
+$('.put-here').html(list)
