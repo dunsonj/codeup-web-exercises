@@ -18,7 +18,7 @@ const wait = milSeconds => {
         return new Promise(resolve => {
             setTimeout(() => {
                 resolve(`Resolve in:  ${milSeconds} milliseconds`)
-            }, milSecond)
+            }, milSeconds)
         })
 };
     wait(1000).then(() => console.log('You\'ll see this after 1 second'));
